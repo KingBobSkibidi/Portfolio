@@ -182,7 +182,7 @@ favourites = {
     "food": [
         {"name": "The Alley",  "description": "Brown Sugar Deerioca Milk", "image": "alleygoto.jpg", "link": "https://www.the-alley.ca/images/menu/TA_Menu_2026-03_English.pdf"},
         {"name": "Coco",        "description": "Bubble Gaga",            "image": "cocogoto.avif", "link": "https://cocobubbletea.com/fruit-tea"},
-        {"name": "Dominoes",  "description": "Deluxe (stuffed crust if i'm rich)", "image": "dominoesgoto.webp", "link": "https://www.dominos.ca/en/pages/order/menu#!/menu/category/all/"},
+        {"name": "Dominoes",  "description": "Deluxe (stuffed crust)", "image": "dominoesgoto.webp", "link": "https://www.dominos.ca/en/pages/order/menu#!/menu/category/all/"},
         {"name": "McDonald's",  "description": "$5 McDouble Meal Deal", "image": "mcdonaldsgoto.avif", "link": "https://www.mcdonalds.com/us/en-us/meal/5-dollar-mcdouble-meal.html"},
         {"name": "Tim Hortons",  "description": "Bacon Farmers Wrap", "image": "timhortonsgoto.webp", "link": "https://timhortons.co.th/product/farmers-wrap/"},
     ],

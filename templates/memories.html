@@ -100,7 +100,25 @@
         if (itemId === activeId) return;
         activeId = itemId;
         allNavLinks.forEach(link => link.classList.remove('active'));
-        linksFor(itemId).forEach(link => link.classList.add('active'));
+        linksFor(itemId).forEach(link => {
+            link.classList.add('active');
+            keepLinkVisible(link);
+        });
+    }
+
+    // nudge the sidebar list so the active link never sits outside its scroll window
+    function keepLinkVisible(link) {
+        const list = link.parentElement;
+        const listRect = list.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+        if (linkRect.top < listRect.top) {
+            // bring the year heading along when the link starts a new year
+            const prev = link.previousElementSibling;
+            const topEl = prev && prev.classList.contains('timeline-nav-year-link') ? prev : link;
+            list.scrollBy({ top: topEl.getBoundingClientRect().top - listRect.top, behavior: 'smooth' });
+        } else if (linkRect.bottom > listRect.bottom) {
+            list.scrollBy({ top: linkRect.bottom - listRect.bottom, behavior: 'smooth' });
+        }
     }
 
     function scrollToId(itemId) {
